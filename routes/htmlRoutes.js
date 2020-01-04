@@ -3,22 +3,22 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index.handlebars");
+    res.render("index");
   });
 
   //Load login page
   app.get("/login", function(req, res) {
-    res.render("login.handlebars");
+    res.render("login");
   });
 
   //Load register page
   app.get("/register", function(req, res) {
-    res.render("register.handlebars");
+    res.render("register");
   });
 
   //Load dashboard page
   app.get("/dashboard", function(req, res) {
-    res.render("dashboard.handlebars");
+    res.render("dashboard");
   });
 
   // Load reviews page

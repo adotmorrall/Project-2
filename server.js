@@ -17,7 +17,7 @@ var db = require("./models");
 // var passport = require("passport");
 
 /* PORT ================================================================================ */
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 /* EXPRESS MIDDLEWARE ========================================================================== */
 app.use(express.urlencoded({ extended: false }));
