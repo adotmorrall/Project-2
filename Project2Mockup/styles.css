@@ -1,0 +1,72 @@
+.container-1 {
+    background-image: url("assets/bg.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    background-image: url("assets/Untitled-1-Recovered.jpg");
+}
+
+.row-1 {
+    padding-top: 2%;
+    padding-bottom: 6%;
+}
+
+.row-2 {
+    padding-top: 13%;
+    padding-left: 0%;
+    padding-right: 0%;
+
+}
+
+.col-text-1 {
+    font-size: 25px;
+    font-style: bold;
+    color: white;
+}
+
+.container-navbar {
+    background-color: black;
+
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 32px;
+}
+
+.glyphicon-login {
+    color: white;
+}
+
+.container-popular {
+    background-color: black;
+}
+
+.row-popular {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    color: white;
+    font-size: 24px;
+}
+
+.col-search-btn {
+    padding-left: 0px;
+}
+
+.col-search-form {
+    padding-right: 0px;
+}
+
+.row-results {
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.card-results {
+    padding: 0px;
+}

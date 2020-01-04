@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Raleway|IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Trouver</title>
+</head>
+
+<body>
+    <div class="container-fluid container-navbar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">TROUVER APP</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <div class="container-fluid container-login">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid container-1">
+        <div class="row row-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 col-text-1">
+                Discover the Best Places to Watch Your Favorite Content!
+            </div>
+        </div>
+        <div class="row row-1">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 col-search-form">
+                <input type="text" class="form-control form-control-=md" placeholder="Search Movies and Shows">
+            </div>
+            <div class="col-sm-1 col-search-btn">
+                <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-collapsable">
+        <div id="demo" class="collapse">
+            <div class="row row-results">
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto">
+                        <div class="card-body card-results">
+                            <img src="assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-popular">
+        <div class="row row-popular">
+            <div class="col-sm-5">
+            </div>
+            <div class="col-sm-4">
+                Current Most Popular
+            </div>
+        </div>
+        <div class="row row-pop-results">
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Show Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
+                        <p class="card-text">Show Description: example text example text example text example text
+                            example text</p>
+                        <a href="#" class="card-link centered">Watch Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
