@@ -1,18 +1,39 @@
+/* .ENV ============================================================== */
 require("dotenv").config();
+
+/* EXPRESS AND HANDLEBARS ============================================================== */
 var express = require("express");
+var flash = require("express-flash");
+var session = require("express-session");
 var exphbs = require("express-handlebars");
 
+var app = express();
+
+/* DATABASE ============================================================================ */
 var db = require("./models");
 
-var app = express();
+/* PASSPORT AND BCRYPT ============================================================================ */
+// var bcrypt = require("bcrypt");
+// var passport = require("passport");
+
+/* PORT ================================================================================ */
 var PORT = process.env.PORT || 3000;
 
-// Middleware
+/* EXPRESS MIDDLEWARE ========================================================================== */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// Handlebars
+app.use(flash());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+);
+
+/* HANDLEBARS ========================================================================== */
 app.engine(
   "handlebars",
   exphbs({
@@ -21,10 +42,11 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// Routes
+/* ROUTES ============================================================================= */
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+/* START SERVER ======================================================================= */
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true

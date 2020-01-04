@@ -3,19 +3,41 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
+    res.render("index.handlebars");
+  });
+
+  //Load login page
+  app.get("/login", function(req, res) {
+    res.render("login.handlebars");
+  });
+
+  //Load register page
+  app.get("/register", function(req, res) {
+    res.render("register.handlebars");
+  });
+
+  //Load dashboard page
+  app.get("/dashboard", function(req, res) {
+    res.render("dashboard.handlebars");
+  });
+
+  // Load reviews page
+  app.get("/reviews", function(req, res) {
+    db.Review.findAll({}).then(function(dbReviews) {
+      res.render("reviews", {
         msg: "Welcome!",
-        examples: dbExamples
+        reviews: dbReviews
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  // Load review page and pass in an review by id
+  app.get("/review/:id", function(req, res) {
+    db.Review.findOne({ where: { id: req.params.id } }).then(function(
+      dbReview
+    ) {
+      res.render("review", {
+        review: dbReview
       });
     });
   });
