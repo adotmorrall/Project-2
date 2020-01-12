@@ -1,36 +1,75 @@
-<div class="container-fluid container-navbar">
-    <nav class="navbar navbar-inverse">
+<div class="container-fluid container-1">
+
+    {{!-- Navbar --}}
+    <nav class="navbar navbar-inverse container-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">TROUVER APP</a>
+                <a id="app-logo" class="navbar-brand" href="#">TROUVER</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <div class="container-fluid container-login">
-                    <form action="/logout?_method=DELETE" method="POST">
-                        <button type="submit">Log Out</button>
-                    </form>
+                <div class="container-fluid">
+                    <li><a id="logout" href="/"><span class="glyphicon glyphicon-user"></span> Log Out</a></li>
                 </div>
             </ul>
         </div>
     </nav>
-</div>
-<div class="container-fluid container-1">
+
+    {{!-- Search Area --}}
     <div class="row row-2">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6 col-text-1">
-            Discover the Best Places to Watch Your Favorite Content!
+        <div class="col-3"></div>
+        <div class="col-6 text-center col-text-1">
+            <h4 id="welcome-message">Discover the best places to watch your favorite content.
+            </h4>
         </div>
     </div>
+    {{!-- ======================================= --}}
+    {{!-- <main>
+        <div class="search-box">
+            <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+            <form action="" class="search-form">
+                <input type="text" placeholder="Search" id="search" autocomplete="off">
+            </form>
+            <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;" xml:space="preserve">
+                <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280" />
+                <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280" />
+            </svg>
+            <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
+        </div>
+    </main> --}}
+    {{!-- =========================================== --}}
     <div class="row row-1">
-        <div class="col-sm-3"></div>
+        <div class="search-box">
+            {{!-- <div class="search-icon"><i class="fa fa-search search-icon"></i></div> --}}
+            <form action="" class="search-form">
+                <input class="text-center" type="text" placeholder="Search movies and shows" id="search"
+                    autocomplete="off">
+            </form>
+            <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;" xml:space="preserve">
+                <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280" />
+                <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280" />
+            </svg>
+            <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
+        </div>
+
+        {{!-- =========== Old Search Bar =================== --}}
+        {{!-- 
+        <div class="col-3"></div>
         <div class="col-sm-5 col-search-form">
             <input type="text" class="form-control form-control-=md" placeholder="Search Movies and Shows">
         </div>
         <div class="col-sm-1 col-search-btn">
             <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">Search</button>
-        </div>
+        </div> --}}
     </div>
 </div>
+{{!-- Search Area End --}}
+
+
+{{!-- API Placeholder --}}
 <div class="container-collapsable">
     <div id="demo" class="collapse">
         <div class="row row-results">
@@ -93,12 +132,19 @@
         </div>
     </div>
 </div>
+{{!-- API Placeholder End --}}
+
+{{!-- Reviews --}}
+<div id="reviews">
+
+</div>
+{{!-- Reviews End --}}
+
+{{!-- Most Popular Movies --}}
 <div class="container-fluid container-popular">
     <div class="row row-popular">
-        <div class="col-sm-5">
-        </div>
-        <div class="col-sm-4">
-            Current Most Popular
+        <div class="col-12 text-center">
+            What's everyone watching
         </div>
     </div>
     <div class="row row-pop-results">
@@ -192,3 +238,8 @@
         </div>
     </div>
 </div>
+{{!-- Most Populat Movies End --}}
+
+{{!-- Javascript and jQuery --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/dashboard.js"></script>

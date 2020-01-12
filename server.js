@@ -3,9 +3,11 @@ require("dotenv").config();
 
 /* EXPRESS AND HANDLEBARS ============================================================== */
 var express = require("express");
-var flash = require("express-flash");
-var session = require("express-session");
+// var flash = require("express-flash");
+// var session = require("express-session");
 var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
+// var cors = require("cors");
 
 var app = express();
 
@@ -20,18 +22,19 @@ var db = require("./models");
 var PORT = process.env.PORT || 8080;
 
 /* EXPRESS MIDDLEWARE ========================================================================== */
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+// app.use(cors());
 app.use(express.static("public"));
 
-app.use(flash());
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-  })
-);
+// app.use(flash());
+// app.use(
+//   session({
+//     secret: process.env.sessionSECRET,
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// );
 
 /* HANDLEBARS ========================================================================== */
 app.engine(

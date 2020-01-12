@@ -1,4 +1,4 @@
-<div class="container-fluid container-navbar">
+{{!-- <div class="container-fluid container-navbar">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -12,182 +12,140 @@
             </ul>
         </div>
     </nav>
-</div>
-<div class="container-fluid container-1">
-    <div class="row row-2">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6 col-text-1">
-            Discover the Best Places to Watch Your Favorite Content!
+</div> --}}
+
+<div class="home-background">
+
+    {{!-- Header Start --}}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container welcome-items">
+            <h1 id="app-logo" class="display-4 text-center">Welcome to Trouver</h1>
+            <p id="welcome-message" class="lead text-center"> Discover the best places to watch
+                your favorite content.
+            </p>
         </div>
     </div>
-    <div class="row row-1">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-5 col-search-form">
-            <input type="text" class="form-control form-control-=md" placeholder="Search Movies and Shows">
-        </div>
-        <div class="col-sm-1 col-search-btn">
-            <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">Search</button>
-        </div>
-    </div>
-</div>
-<div class="container-collapsable">
-    <div id="demo" class="collapse">
-        <div class="row row-results">
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+    {{!-- Header End --}}
+
+    {{!-- Content Start --}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-6">
+                <div class="card form-card">
+                    <div class="card-body">
+                        {{!-- Form Start --}}
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="panel panel-login">
+
+                                {{!-- Tab Panel Start --}}
+                                <div class="panel-heading">
+
+                                    {{!-- Login/Register Tabs Start --}}
+                                    <div class="row">
+                                        <div id="login-panel" class="col-6 login-register">
+                                            <a href="#" class="active" id="login-form-link">Log In</a>
+                                        </div>
+                                        {{!-- <div class="col-2 vl"></div> --}}
+                                        <div class="col-6 login-register">
+                                            <a href="#" id="register-form-link">Register</a>
+                                        </div>
+                                    </div>
+                                    {{!-- Tabs End --}}
+                                    <hr>
+
+                                </div>
+                                {{!-- Tab Panel End --}}
+
+
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+
+                                            {{!-- Login Form Content Start --}}
+                                            <form id="login-form" action="/login" method="post" role="form"
+                                                style="display: block;">
+                                                <div class="form-group">
+                                                    <input type="email" name="email" id="login-email" tabindex="1"
+                                                        class="form-control bg-gradient-light text-dark"
+                                                        placeholder="Email Address" value="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="password" id="login-password"
+                                                        tabindex="2" class="form-control" placeholder="Password"
+                                                        required>
+                                                </div>
+                                                {{!-- <div class="form-group text-center">
+                                                    <input type="checkbox" tabindex="3" class="" name="remember"
+                                                        id="remember">
+                                                    <label for="remember"> Remember Me</label>
+                                                </div> --}}
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-3"></div>
+                                                        <div class="col-6">
+                                                            <input type="submit" name="login-submit" id="login-submit"
+                                                                tabindex="4"
+                                                                class="form-control btn btn-login login-register"
+                                                                value="Log In">
+                                                        </div>
+                                                        <div class="col-3"></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            {{!-- Login Form End --}}
+
+                                            {{!-- Register Form Start --}}
+                                            <form id="register-form" action="/register" method="post" role="form"
+                                                style="display: none;">
+                                                <div class="form-group">
+                                                    <input type="text" name="firstName" id="firstName" tabindex="1"
+                                                        class="form-control" placeholder="First Name" value="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" name="lastName" id="lastName" tabindex="1"
+                                                        class="form-control " placeholder="Last Name" value="" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" name="email" id="email" tabindex="1"
+                                                        class="form-control" placeholder="Email Address" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="password" id="password" tabindex="2"
+                                                        class="form-control" placeholder="Password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-3"></div>
+                                                        <div class="col-6">
+                                                            <input type="submit" name="register-submit"
+                                                                id="register-submit" tabindex="4"
+                                                                class="form-control btn btn-register login-register"
+                                                                value="Register">
+                                                        </div>
+                                                        <div class="col-3"></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            {{!-- Register Form End --}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- Form End --}}
+
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
+            <div class="col">
             </div>
         </div>
-    </div>
-</div>
-<div class="container-fluid container-popular">
-    <div class="row row-popular">
-        <div class="col-sm-5">
-        </div>
-        <div class="col-sm-4">
-            Current Most Popular
-        </div>
-    </div>
-    <div class="row row-pop-results">
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-            <div class="card mx-auto">
-                <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
-                    <a href="#" class="card-link centered">Watch Now!</a>
-                </div>
-            </div>
-        </div>
+        {{!-- Content End --}}
     </div>
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
