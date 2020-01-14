@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "1234567890",
+        "password": "Satch8826",
         "database": "trouverUsers_db",
         "host": "localhost",
         "dialect": "mysql"

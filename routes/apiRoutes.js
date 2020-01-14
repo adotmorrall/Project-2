@@ -3,9 +3,9 @@ var db = require("../models");
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 
-module.exports = function(app) {
+module.exports = function (app) {
   /* LOGIN/REGISTER ==================================================================== */
-  app.post("/register", function(req, res) {
+  app.post("/register", function (req, res) {
     var userData = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -17,7 +17,7 @@ module.exports = function(app) {
         email: req.body.email
       }
     })
-      .then(function(user) {
+      .then(function (user) {
         if (!user) {
           var hashedPassword = bcrypt.hashSync(
             userData.password,
@@ -26,7 +26,7 @@ module.exports = function(app) {
           );
           userData.password = hashedPassword;
           db.User.create(userData)
-            .then(function(user) {
+            .then(function (user) {
               //   console.log(process.env);
 
               var token = jwt.sign(
@@ -39,26 +39,26 @@ module.exports = function(app) {
               //   res.json({ token: token });
               res.redirect("/dashboard");
             })
-            .catch(function(err) {
+            .catch(function (err) {
               res.send("error: " + err);
             });
         } else {
           res.json({ error: "User already exists" });
         }
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.send("error: " + err);
       });
   });
 
   //LOGIN
-  app.post("/login", function(req, res) {
+  app.post("/login", function (req, res) {
     db.User.findOne({
       where: {
         email: req.body.email
       }
     })
-      .then(function(user) {
+      .then(function (user) {
         if (!user) {
           return res.status(404).send("User Not Found."); // TODO: User not found message
         }
@@ -73,7 +73,7 @@ module.exports = function(app) {
             reason: "Invalid Password" // TODO: Invalid password message
           });
         } else {
-          jwt.sign({ id: user.id }, process.env.SESSION_SECRET, function(
+          jwt.sign({ id: user.id }, process.env.SESSION_SECRET, function (
             token
           ) {
             res
@@ -85,7 +85,7 @@ module.exports = function(app) {
           });
         }
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.status(500).send("error: " + err);
       });
   });
@@ -147,7 +147,7 @@ module.exports = function(app) {
   //   );
 
   // Log out and clear cookies
-  app.post("/logout", function(req, res) {
+  app.post("/logout", function (req, res) {
     res.redirect("/"); //redirect to logged out view (homepage)
   });
 
@@ -170,22 +170,46 @@ module.exports = function(app) {
   /* REVIEWS ==================================================================== */
 
   // Get all reviews
-  app.get("/api/reviews", function(req, res) {
-    db.Review.findAll({}).then(function(dbReviews) {
+  // app.get("/api/reviews", function (req, res) {
+  //   db.Review.findAll({
+  //     attributes: ["id", "title", "titleDescription", "userID"]
+  //   }).then(function (dbReviews) {
+  //     res.json(dbReviews);
+  //   });
+  // });
+
+  // Get all reviews
+  app.get("/api/reviews/:title", function (req, res) {
+    db.Review.findAll({
+      attributes: ["id", "title", "titleDescription", "userID"],
+      where: {
+        title: req.params.title
+      }
+    }).then(function (dbReviews) {
       res.json(dbReviews);
     });
   });
 
   // Create a new review
-  app.post("/api/reviews", function(req, res) {
-    db.Review.create(req.body).then(function(dbReview) {
+  app.post("/api/reviews", function (req, res) {
+    console.log(req.body);
+    db.Review.create(
+      {
+        title: req.body.title,
+        titleDescription: req.body.titleDescription
+
+      },
+      {
+        fields: ["title", "titleDescription"]
+      }
+    ).then(function (dbReview) {
       res.json(dbReview);
     });
   });
 
   // Delete an review by id
-  app.delete("/api/reviews/:id", function(req, res) {
-    db.Review.destroy({ where: { id: req.params.id } }).then(function(
+  app.delete("/api/reviews/:id", function (req, res) {
+    db.Review.destroy({ where: { id: req.params.id } }).then(function (
       dbReview
     ) {
       res.json(dbReview);
