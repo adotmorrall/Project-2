@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse container-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a id="app-logo" class="navbar-brand" href="#">TROUVER</a>
+                <a id="app-logo" class="navbar-brand" href="dashboard">TROUVER</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <div class="container-fluid">
@@ -16,145 +16,124 @@
 
     {{!-- Search Area --}}
     <div class="row row-2">
-        <div class="col-3"></div>
-        <div class="col-6 text-center col-text-1">
+        <div class="col-2"></div>
+        <div class="col-8 text-center col-text-1">
             <h4 id="welcome-message">Discover the best places to watch your favorite content.
             </h4>
         </div>
     </div>
-    {{!-- ======================================= --}}
-    {{!-- <main>
-        <div class="search-box">
-            <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
-            <form action="" class="search-form">
-                <input type="text" placeholder="Search" id="search" autocomplete="off">
-            </form>
-            <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;" xml:space="preserve">
-                <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280" />
-                <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280" />
-            </svg>
-            <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
-        </div>
-    </main> --}}
-    {{!-- =========================================== --}}
-    <div class="row row-1">
-        <div class="search-box">
-            {{!-- <div class="search-icon"><i class="fa fa-search search-icon"></i></div> --}}
-            <form action="" class="search-form">
-                <input class="text-center" type="text" placeholder="Search movies and shows" id="search"
-                    autocomplete="off">
-            </form>
-            <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;" xml:space="preserve">
-                <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280" />
-                <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280" />
-            </svg>
-            <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
-        </div>
+    {{!-- =================== Search Bar ==================== --}}
 
-        {{!-- =========== Old Search Bar =================== --}}
-        {{!-- 
-        <div class="col-3"></div>
-        <div class="col-sm-5 col-search-form">
-            <input type="text" class="form-control form-control-=md" placeholder="Search Movies and Shows">
+    <div class="row row-1">
+        <div class="search__container">
+            <div class="search-form">
+                <input class="search__input" type="text" placeholder="Search movies and tv shows" id="search"
+                    autocomplete="off">
+                <button type="submit" data-toggle="collapse" data-target="#demo"
+                    class="searchBtn btn btn-outline-light"><i class="fa fa-search search-icon"></i></button>
+            </div>
         </div>
-        <div class="col-sm-1 col-search-btn">
-            <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">Search</button>
-        </div> --}}
     </div>
 </div>
 {{!-- Search Area End --}}
 
 
-{{!-- API Placeholder --}}
-<div class="container-collapsable">
-    <div id="demo" class="collapse">
-        <div class="row row-results">
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <div class="card mx-auto">
-                    <div class="card-body card-results">
-                        <img src="../public/assets/Untitled-1-Recovered.jpg" class="img-thumbnail" alt="Cinque Terre">
+{{!-- Search Results --}}
+<div class="container-fluid container-search">
+    <div class="row row-search-results" id="results"></div>
+    <br>
+    {{!-- Reviews Start --}}
+    <div class="container-collapsable">
+        <div id="demo" class="collapse col-12">
+            <div id="reviews">
+                <hr>
+                <div class="review-area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col-12 review-header">
+                                <h1>{{msg}}</h1>
+                                <h2>Watched this before?</h2>
+                                <p>Add a review and let us know what you think.</p>
+                            </div>
+                            <div class="col-12 review-form">
+                                <form class="clearfix mb-4" method="POST">
+                                    {{!-- <div class="form-group">
+                                        <label for="review-text">Review Text</label>
+                                        <input type="text" id="review-text" class="form-control"
+                                            aria-describedby="review-text" placeholder="Enter Review Text">
+                                    </div> --}}
+                                    <div class="form-group">
+                                        {{!-- <label for="review-description">Write a review</label> --}}
+                                        <textarea class="form-control" id="review-description"
+                                            aria-describedby="review-description"
+                                            placeholder="Tired of sobby melodramas and stupid comedies? Why not watch a film with a difference? American Beauty by Sam Mendes is both a drama and a comedy, which definitely absorbed the best features of the genres, creating a powerful and mind-boggling cocktail of love, hatred, sinful passion, rebellion, loneliness, fear and total liberation."></textarea>
+                                    </div>
+                                    <div class="review-submit">
+                                        <button type="button" id="submit" class="btn btn-danger">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-12 review-results">
+                                {{!-- <h3>Reviews:</h3> --}}
+                                <ul id="review-list" class="list-group">
+                                    {{#each reviews}}
+                                    <li data-id="{{this.id}}" class="list-group-item">
+                                        <a href="review/{{this.id}}">{{this.text}}</a>
+                                        <button class="btn btn-danger float-right delete">ｘ</button>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    {{!-- Reviews End --}}
 </div>
-{{!-- API Placeholder End --}}
+{{!-- Search Results End --}}
 
-{{!-- Reviews --}}
+{{!-- Reviews Start --}}
 <div id="reviews">
 
 </div>
 {{!-- Reviews End --}}
 
-{{!-- Most Popular Movies --}}
+{{!-- Most Popular Start --}}
 <div class="container-fluid container-popular">
     <div class="row row-popular">
         <div class="col-12 text-center">
-            What's everyone watching
+            What everyone's watching
         </div>
     </div>
     <div class="row row-pop-results">
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -162,10 +141,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -173,10 +171,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -184,10 +201,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -195,10 +231,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -206,10 +261,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -217,10 +291,29 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
@@ -228,18 +321,56 @@
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card mx-auto">
                 <div class="card-body">
-                    <h5 class="card-title">Show Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Platform</h6>
-                    <p class="card-text">Show Description: example text example text example text example text
-                        example text</p>
+                    <h5 class="card-title">Schitt's Creek</h5>
+                    <div class="platforms">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                        <img src="/assets/platforms/Netflix.png" height="40px" class="rounded float-left" alt="...">
+                    </div>
+                    <hr>
+                    <p class="card-text">In the sitcom "Schitt's Creek," a wealthy couple -- video store magnate
+                        Johnny
+                        and his soap opera star wife Moira <span id="dots">...</span><span id="more">-- suddenly
+                            find themselves completely broke. With only one
+                            remaining asset, a small town called Schitt's Creek, which the Roses bought years
+                            earlier as
+                            a joke, this once-wealthy couple must give up life as they know it. With their two
+                            spoiled
+                            children in tow and their pampered lives behind them, the Rose family is forced to face
+                            their newfound poverty head-on and come together as a family to survive.</span>
+                        <button type="button" class="btn btn-link" onclick="myFunction()" id="myBtn">Read
+                            more</button>
+                    </p>
+
+
                     <a href="#" class="card-link centered">Watch Now!</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{{!-- Most Populat Movies End --}}
+{{!-- Most Popular End --}}
+
 
 {{!-- Javascript and jQuery --}}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="/js/dashboard.js"></script>
+<script src="/js/reviews.js"></script>

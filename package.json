@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "Trouver",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Discover where to watch your favorite movies and tv shows",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -11,7 +11,7 @@
 }
 
 .row-1 {
-    padding-top: 2%;
+    padding-top: 1%;
     padding-bottom: 10%;
 }
 
@@ -23,7 +23,7 @@
     font-size: 25px;
     font-style: bold;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container-navbar {
@@ -42,6 +42,7 @@
 
 .container-popular {
     background-color: black;
+    margin-top: -24px;
 }
 
 .row-popular {
@@ -70,6 +71,7 @@
     padding: 0px;
     background-color: white;
 }
+
 
 #app-logo:hover {
     color: white;
@@ -135,6 +137,11 @@
 }
 
 #welcome-message {
+    font-size: 2rem;
+}
+
+#welcome-message,
+#demo {
     padding: 1% 0%;
     margin: 0;
     animation-name: angry-animation;
@@ -175,9 +182,14 @@
 
 #app-logo {
     font-family: 'Titan One', cursive;
+    text-decoration: none;
 }
 
-.login-register,
+a {
+    text-decoration: none;
+}
+
+#a .login-register,
 #logout {
     font-family: 'Unica One', cursive;
 }
@@ -189,7 +201,7 @@
 
 p,
 input {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .form-card {
@@ -335,164 +347,166 @@ input {
 
 /* SEARCH ========================================== */
 
-.search-box {
-    position: relative;
-    width: 100%;
-    max-width: 360px;
-    height: 60px;
-    border-radius: 120px;
+/* Search 2 */
+.search__container {
+    padding-top: 5px;
     margin: 0 auto;
+}
+
+.search__input {
+    width: 600px;
+    padding: 16px 24px;
+
+
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: white;
+    background-color: transparent;
+    /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+    /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); */
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 120px;
+    border: 2px solid white;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+
+    height: 60px;
     animation-name: angry-animation;
     animation-duration: 2s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    transition: 1s;
     animation-fill-mode: forwards;
-
 }
 
-.search-icon,
-.go-icon {
-    position: absolute;
-    top: 0;
-    height: 60px;
-    width: 86px;
-    line-height: 61px;
-    text-align: center;
+.search__input::placeholder {
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-/* .search-icon {
-    left: 0;
-    pointer-events: none;
-    font-size: 1.22em;
-    will-change: transform;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -o-transform-origin: center center;
-    transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -webkit-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -moz-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -o-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+.search__input:hover,
+:focus {
+    padding: 12px 0;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+    background-position: 100% center;
 }
 
-.si-rotate {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-} */
-
-.go-icon {
-    right: 0;
-    pointer-events: none;
-    font-size: 1.38em;
-    will-change: opacity;
-    cursor: default;
-    opacity: 0;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -webkit-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -moz-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -o-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+/* POPULAR */
+#more {
+    display: none;
 }
 
-.go-in {
-    opacity: 1;
-    pointer-events: all;
-    cursor: pointer;
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -webkit-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -moz-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    -o-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+#myBtn {
+    padding: 0;
+    border: 0;
 }
 
-.search-border {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    height: 60px;
+.platforms {
+    margin-bottom: 70px;
 }
 
-.border {
-    fill: none;
-    stroke: #FFFFFF;
-    stroke-width: 5;
-    stroke-miterlimit: 10;
+.rounded {
+    padding-right: 10px;
 }
 
-.border {
-    stroke-dasharray: 740;
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
-    -webkit-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
-    -moz-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
-    -o-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+#search-button {
+    background: rgba(0, 0, 0, 0.0);
 }
 
-.border-searching .border {
-    stroke-dasharray: 740;
-    stroke-dashoffset: 459;
-    transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
-    -webkit-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
-    -moz-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
-    -o-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+
+
+.search-card-title {
+    text-align: center;
+    margin: 48px auto;
+    font-family: 'Unica One', cursive;
+    font-size: 30px;
+
 }
 
-#search {
-    font-family: 'Montserrat Alternates', sans-serif;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 120px;
-    border: none;
-    background: rgba(255, 255, 255, 0);
-    padding: 0 30px 0 30px;
-    color: #FFFFFF;
-    font-size: 1.32em;
-    font-weight: 400;
-    letter-spacing: -0.015em;
-    outline: none;
+.search-card-text {
+    margin: 3rem;
+    /* padding: 0 72px; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
-#search::-webkit-input-placeholder {
-    color: #FFFFFF;
+.card {
+    border: 0;
 }
 
-#search::-moz-placeholder {
-    color: #FFFFFF;
+#results,
+#reviews {
+    margin: 0 72px;
 }
 
-#search:-ms-input-placeholder {
-    color: #FFFFFF;
+.searchBtn {
+    color: white;
+    border: 0px;
 }
 
-#search:-moz-placeholder {
-    color: #FFFFFF;
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: 18px;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
 }
 
-#search::-moz-selection {
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.25);
+/* Reviews */
+.review-area {
+    margin: 0 auto 24px;
 }
 
-#search::selection {
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.25);
+.review-header,
+.review-form,
+.review-results {
+    width: 720px;
+    margin: 0px auto;
+}
+
+.review-header h2 {
+    text-align: center;
+    margin: 24px auto 12px;
+    font-family: 'Unica One', cursive;
+    font-size: 20px;
+}
+
+.review-header p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.review-submit {
+    margin: 0 auto;
+    width: max-content;
+}
+
+#submit {
+    background-color: #ff8080;
+    font-family: 'Unica One', cursive;
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: 0px;
+}
+
+
+#submit:hover,
+#submit:focus {
+    color: #fff;
+    background-color: #b30000;
 }

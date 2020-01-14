@@ -4,6 +4,22 @@ $(document).ready(function() {
       $("#login-form")
         .delay(100)
         .fadeIn(100);
+      // .validate({
+      //   rules: {
+      //     email: {
+      //       required: true,
+      //       email: true
+      //     },
+      //     password: {
+      //       required: true
+      //     }
+      //   },
+      //   messages: {
+      //     email: {
+      //       email: "Please enter a valid email address."
+      //     }
+      //   }
+      // })
       $("#register-form").fadeOut(100);
       $("#register-form-link").removeClass("active");
       $(this).addClass("active");
