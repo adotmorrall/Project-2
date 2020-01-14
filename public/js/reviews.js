@@ -1,5 +1,5 @@
 // Get references to page elements
-var $reviewText = $("#review-text");
+// var $reviewText = $("#review-text");
 var $reviewDescription = $("#review-description");
 var $submitBtn = $("#submit");
 var $reviewList = $("#review-list");
@@ -34,16 +34,15 @@ var API = {
 var refreshReviews = function() {
   API.getReviews().then(function(data) {
     var $reviews = data.map(function(review) {
-      var $a = $("<a>")
-        .text(review.text)
-        .attr("href", "/review/" + review.id);
+      var $p = $("<p>").text(review.description);
+      // .attr("href", "/review/" + review.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
           "data-id": review.id
         })
-        .append($a);
+        .append($p);
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
@@ -65,12 +64,12 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var review = {
-    text: $reviewText.val().trim(),
+    // text: $reviewText.val().trim(),
     description: $reviewDescription.val().trim()
   };
 
-  if (!(review.text && review.description)) {
-    alert("You must enter an review text and description!");
+  if (!review.description) {
+    alert("Please enter a review");
     return;
   }
 
@@ -78,7 +77,7 @@ var handleFormSubmit = function(event) {
     refreshReviews();
   });
 
-  $reviewText.val("");
+  //   $reviewText.val("");
   $reviewDescription.val("");
 };
 
